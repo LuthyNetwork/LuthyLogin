@@ -14,7 +14,13 @@ It has a custom event called PlayerLoginEvent which is called when a player logi
 
 Ian Libânio - Discord: Null#1001
 
-[https://github.com/LuthyNetwork/LuthyLogin](https://github.com/ianlibanio/)
+[https://github.com/LuthyNetwork/LuthyLobby](https://github.com/ianlibanio/)
+
+### Docs
+
+Yan Spatt - Discord: Yan Spatt#0001
+
+[https://github.com/LuthyNetwork/LuthyCore](https://github.com/Yspatt/)
 
 ## Contributing
 
