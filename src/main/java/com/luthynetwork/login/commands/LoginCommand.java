@@ -27,12 +27,13 @@ public class LoginCommand extends VoidCommand {
     public void command(Context context) {
         val service = LuthyLogin.getService();
         val player = context.player();
+        val label = context.label();
         val args = context.args();
 
         val uuid = player.getUniqueId();
 
         if (args.length < 1) {
-            player.sendMessage(Message.INTERNAL_PREFIX + "§cUse /login (senha)");
+            player.sendMessage(Message.INTERNAL_PREFIX + "§cUse /" + label + " (senha)");
             return;
         }
 

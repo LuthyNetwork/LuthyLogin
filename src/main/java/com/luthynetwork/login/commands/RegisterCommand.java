@@ -19,15 +19,16 @@ public class RegisterCommand extends VoidCommand {
     public void command(Context context) {
         val service = LuthyLogin.getService();
         val player = context.player();
+        val label = context.label();
         val args = context.args();
 
         if (args.length < 2) {
-            player.sendMessage(Message.INTERNAL_PREFIX + "§cUse /registrar (senha) (senha) para se registrar.");
+            player.sendMessage(Message.INTERNAL_PREFIX + "§cUse /" + label + " (senha) (senha) para se registrar.");
             return;
         }
 
         if (service.isRegistered(player.getUniqueId())) {
-            player.sendMessage(Message.INTERNAL_PREFIX + "§cVocê já possui uma conta! Use /login (senha) para efetuar a autenticação.");
+            player.sendMessage(Message.INTERNAL_PREFIX + "§cVocê já possui uma conta! Use /logar (senha) para efetuar a autenticação.");
             return;
         }
 
@@ -55,7 +56,7 @@ public class RegisterCommand extends VoidCommand {
         Result result = service.register(player, password);
 
         if (result == Result.REGISTER_SUCCESS) {
-            player.sendMessage(Message.INTERNAL_PREFIX + "§aAutenticado(a) com sucesso! Agora use /login (senha) para entrar no servidor.");
+            player.sendMessage(Message.INTERNAL_PREFIX + "§aAutenticado(a) com sucesso! Agora use /logar (senha) para entrar no servidor.");
 
             TitleAPI.clearTitle(player);
             TitleAPI.sendTitle(player, 0, 20 * 5, 0, "§eLuthy Network", "§aRegistrado(a) com sucesso!");
