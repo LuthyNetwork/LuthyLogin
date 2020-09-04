@@ -1,0 +1,7 @@
+name: LuthyLogin
+description: Just a simple login plugin.
+api-version: '1.8'
+version: '1.0'
+authors: [zMrNull]
+depend: ["LuthyCore", "ActionBarAPI"]
+main: com.luthynetwork.login.LuthyLogin
